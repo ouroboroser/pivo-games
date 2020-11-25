@@ -1,46 +1,26 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-import {nameIsValid, emailIsValid, passwordIsValid } from './validation';
+import {nameIsValid, emailIsValid, passwordIsValid } from '../validation';
+
+const apiUrl = 'http://35.233.79.129'
 
 export const SignUpForm = () => {
-  const [name, setName] = useState<string>('');
+  const [username, setUsername] = useState<string>('');
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [confirmPassword, setConfirmPassword] = useState<string>('');
-  const [response, setResponse] = useState<boolean>(false);
   const [error, setError] = useState<boolean>(false);
 
-  const signUpHandler = ( name: string, email: string, password: string, confirmPassword: string) => {
-    console.log( 'name:', name, 'email:', email, 'password:', password, 'confirmPassword:', confirmPassword );
-
-    const checkedName = nameIsValid(name);
+  const signUpHandler = ( username: string, email: string, password: string, confirmPassword: string) => {
+    const checkedUsername = nameIsValid(username);
     const checkedEmail = emailIsValid(email);
     const checkedPassword = passwordIsValid(password);
 
-    if ( !checkedName || !checkedEmail || !checkedPassword || password != confirmPassword) {
+    if ( !checkedUsername || !checkedEmail || !checkedPassword || password !== confirmPassword) {
       setError(true);
-      console.log('Error status has been changed');
     } else {
-      const headers = {
-        //'Content-Type': 'application/json;charset=UTF-8',
-        "Access-Control-Allow-Origin": "*",
-        'Content-Type': 'application/json',
-        "Accept": "application/json",
-  "X-Requested-With": "XMLHttpRequest",
-  "Access-Control-Allow-Methods" : "GET,POST,PUT,DELETE,OPTIONS",
-  "Access-Control-Allow-Headers": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With",
-      }
-
-      const data = {
-        username: name,
-        password,
-        email,
-        role:'user'
-      }
-
-      console.log('headers:', headers )
-      axios.post('http://35.233.79.129/user', { username: name, password, email, role: 'user'}, {'headers':headers})
+      axios.post(apiUrl + '/user', { username, password, email, role: 'user'})
       .then((response) => {
         
         console.log(response);
@@ -55,11 +35,12 @@ export const SignUpForm = () => {
     <div>
       Sing up form
       <div>
-        <p> <input placeholder='Name' value={name} onChange={e => setName(e.target.value)}/> </p>
+        <p> <input placeholder='Name' value={username} onChange={e => setUsername(e.target.value)}/> </p>
         <p> <input placeholder='Email' value={email} onChange={e => setEmail(e.target.value)}/> </p>
         <p> <input placeholder='Password' value={password} onChange={e => setPassword(e.target.value)}/> </p>
-        <p> <input placeholder='Confirm password' value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)}/> </p>
-        <button onClick={() => signUpHandler(name, email, password, confirmPassword)}> Sign up </button>
+        <p> <input placeholder='Confirm' value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)}/> </p>
+        <button onClick={() => signUpHandler(username, email, password, confirmPassword)}> Sign up </button>
+        {error && <p> Data is not correct </p>}
       </div>
     </div>
   );

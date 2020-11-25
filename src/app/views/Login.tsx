@@ -1,4 +1,5 @@
 import React from 'react';
+import { LoginForm } from '../components';
 
 export const Login = () => {
   return (
@@ -9,6 +10,7 @@ export const Login = () => {
           <h2>
               page
           </h2>
+          <LoginForm />
       </>
   )
 };
