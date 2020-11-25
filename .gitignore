@@ -24,4 +24,4 @@ yarn-error.log*
 
 
 #stryker-tmp
-/stryker-tmp
+.stryker-tmp
