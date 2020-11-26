@@ -1,0 +1,112 @@
+@import '../colors.scss';
+@import '../fonts.scss';
+
+.signUpForm {
+    margin: 5rem 0 0 0;
+    border-radius: 10px;
+    display: flex;
+    justify-content:center;
+    box-shadow: 10px 15px 10px $form-shadow;
+    border: 1px solid $form-border-color;
+    padding: 30px;
+    width: 50%;
+
+    &Title{
+        text-align: center;
+        font-family: 'Noto Sans TC', sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    &Inpt{
+        width: 35%;
+    }
+
+    &Inpt input{
+        width: 100%;
+        padding: 5px;
+        border:none;
+        border-bottom: 1.5px solid $border-input-color;
+        margin: 0 0 5px 0;
+
+        &:focus {
+            border-bottom: 1.5px solid $input-focus-color;
+        }
+    }
+
+    &Error{
+        text-align: center;
+        font-family: 'Noto Sans TC', sans-serif;
+        color:rgb(236,97,91);
+        font-size: 13px;
+        margin-top: 1.5rem;
+    }
+
+    &Btn{
+        width: 60%;
+        margin: 0 0 0 20%;
+        padding: 5px;
+        color:$white;
+        font-family: 'Noto Sans TC', sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        background-color:$signup-btn-color;
+        border: none;
+        border-radius:5px;
+        margin-top: 5px;
+    }
+
+    &LinkWrapper{
+        text-align: center;
+        font-family: 'Noto Sans TC', sans-serif;
+    }
+
+    &Link {
+        color:$form-link;
+        text-decoration: none;
+    
+        &:hover{
+            color:$form-link-hover;
+            text-decoration: none;
+        }
+
+        &:focus {
+            outline: none;
+        }
+        
+    }
+
+    &Wrapper{
+        width: 65%;
+    }
+
+    &Img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1400px) {
+    .signUpForm{
+        width: 70%;
+    }
+}
+
+@media (max-width: 900px) {
+    .signUpForm{
+        flex-direction: column;
+
+        &Inpt{
+            width: 100%;
+        }
+
+        &Wrapper{
+            width: 100%;
+        }
+
+        &Btn{
+            width: 30%;
+            margin: 0 0 0 35%;
+        }
+    }
+    
+}

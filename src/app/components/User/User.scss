@@ -1,0 +1,89 @@
+@import '../colors.scss';
+@import '../fonts.scss';
+
+.user {
+    background-color: rgb(231, 231, 231);
+    background-color: rgb(250, 249, 249);
+    height: 100vh;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 10px 15px 10px rgb(211, 211, 211);
+    //border: 1px solid red;
+    z-index: 999;
+
+    &Info{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        &Avatar{
+            width: 150px;
+            height: 150px;
+            border: 3px solid rgb(122, 106, 214);
+            border-radius: 100%;
+        }
+
+        &Bio{
+            font-family: 'Noto Sans TC', sans-serif;
+            margin-left: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+
+            &Name{
+                font-weight: 900;
+                font-size: 18px;
+            }
+
+            &Bio{
+                font-weight: 400;
+                font-size: 16px;
+            }
+
+            &Location{
+                font-weight: 100;
+                font-size: 15px;
+                color: rgb(201, 201, 201);
+            }
+        }
+    }
+
+    &Link{
+        display: flex;
+        height: 100px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        &Wrapper{
+            height: 45px;
+            width: 200px;
+            margin: 1rem;
+            background-color: $signup-btn-color;
+            border-radius: 25px;
+
+            &Link{
+                text-decoration: none;
+                color: white;
+                font-size: 16px;
+                font-weight: 500;
+                //border: 1px solid red;
+                margin-top: 10rem;
+
+                &:hover {
+                    text-decoration: none;
+                    color: white
+                }
+            }
+        }
+    }
+
+    &statisticsBlock{
+        width: 100%;
+    }
+}
