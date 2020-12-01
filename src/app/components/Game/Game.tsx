@@ -1,10 +1,17 @@
+import { profile } from 'console';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Game.scss';
 
-export const Game = () => {
+type GameProps = {
+    gameName: string,
+    linkPath: string,
+}
+
+export const Game:React.FC<GameProps> = ({gameName, linkPath}) => {
     return (
         <div className = 'game'>
-            Game
+            <Link to = {linkPath}> {gameName} </Link>
         </div>
     )
 }

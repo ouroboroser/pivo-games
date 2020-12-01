@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { User, Games } from '../../components';
+import { User, Games, AuthNavBar } from '../../components';
 import './Profile.scss';
 
 export const Profile = () => {
