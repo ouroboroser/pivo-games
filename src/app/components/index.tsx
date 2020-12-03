@@ -4,6 +4,7 @@ import { User } from './User/User';
 import { AuthNavBar } from './AuthNavBar/AuthNavBar';
 import { Games } from './Games/Games';
 import {Game} from './Game/Game';
+import { MillionareSelect } from './MillionareSelect/MillionareSelect';
 import {Statistics} from './Statistics/Statistics';
 
 
@@ -15,5 +16,6 @@ export {
     AuthNavBar,
     Games,
     Game,
+    MillionareSelect,
     Statistics
 }
