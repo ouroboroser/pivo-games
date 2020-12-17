@@ -5,8 +5,9 @@ import { IoIosArrowForward } from 'react-icons/all';
 import axios from 'axios';
 import './MillionareSelect.scss';
 import { Loading } from '../../components';
+import { Game } from '../../services/game';
 
-export const MillionareSelect = () => {
+export const MillionareSelect = (props: {game: Game}) => {
   const [topic, setTopic] = useState<string>('');
   const [selectTopic, setSelectTopic] = useState<boolean>(false);
 
@@ -36,19 +37,28 @@ export const MillionareSelect = () => {
     console.log('questions: ', questions)
   }
 
-  const startGame = (topic: string, level: string, questions: number) => {
+  const t = () => {
+    console.log('1', loading);
     setLoading(true);
-    console.log(topic, level, questions);
-    axios.get(`http://35.233.79.129/game/millionaire?topic=${topic}&diffculty=${level}&questions=${questions}`)
-    .then((response) => {
-      console.log(response);
-      setLoading(false)
-    })
-    .catch((error) => {
-      console.log(error);
-      setLoading(false);
-    });
+    console.log('2', loading);
+    props.game.selectOptions(topic, level, questions)
+  
+    console.log('3', loading);
   }
+
+  // const startGame = (topic: string, level: string, questions: number) => {
+  //   setLoading(true);
+  //   console.log(topic, level, questions);
+  //   axios.get(`http://35.233.79.129/game/millionaire?topic=${topic}&diffculty=${level}&questions=${questions}`)
+  //   .then((response) => {
+  //     console.log(response);
+  //     setLoading(false)
+  //   })
+  //   .catch((error) => {
+  //     console.log(error);
+  //     setLoading(false);
+  //   });
+  // }
 
 
   return (
@@ -91,7 +101,7 @@ export const MillionareSelect = () => {
         </DropdownButton>
       </div>
       { selectQuestions && <p className='selectTopicResult'>You selected {questions} </p>}
-      <button id = 'startGame' onClick = {() => startGame(topic, level, questions)}> Start game </button>
+      <button id = 'startGame' onClick={t}> Start game </button>
       { loading ?  <Loading /> : "" }
       </div>
     </div>

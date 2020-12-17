@@ -1,20 +1,22 @@
-interface Game {
+import axios from 'axios';
+import {useState} from 'react';
 
-}
+const apiUrlGame = 'http://35.233.79.129/game';
 
-class Game {
-    url: string;
+export type Game = {
+  selectOptions: (x: string, y: string, z: number) => void;
+};
 
-    constructor(gameUrl: string) {
-        this.url = gameUrl;
-    }
-}
-
-export class Millionare extends Game {
-    topic: string;
-
-    constructor(url: string, _topic: string) {
-        super(url);
-        this.topic = _topic;
-    }
-}
+export const gameMillionare: Game = {
+  selectOptions: (topic: string, level: string, questions: number) => {
+    axios.get(`${apiUrlGame}/millionaire?topic=${topic}&diffculty=${level}&questions=${questions}`)
+      .then((response) => {
+        console.log(response);
+        //setLoading(false);
+      })
+      .catch((error) => {
+        console.log(error);
+        //setLoading(false);
+      });
+  },
+};
