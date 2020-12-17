@@ -18,49 +18,46 @@
     align-items: center;
     border-radius: 10px;
     padding: 5px;
-    color: $white;
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 15px;
     font-weight: bold;
-    background: rgb(82,34,208);
-    background: linear-gradient(90deg, rgba(82,34,208,1) 0%, rgba(134,97,229,1) 100%);
     margin-bottom: 10px;
+    border: 1px solid $form-border-color;
+
+    &:hover {
+      box-shadow: 0px 0px 10px $form-shadow;
+      border: 1px solid white;
+    }
   }
 
-  &LevelWrapper{
-    background: rgb(82,34,208);
-    background: linear-gradient(90deg, rgba(134,97,229,1) 19%, rgba(82,34,208,1) 100%);
-  }
-
-  &Topic {
+  &Topic, &Level {
     background-color: white;
     display: flex;
     flex-direction: column;
-    width: 405px;
-    margin-left: -351px;
+    width: 600px;
+    margin-left: -445px;
     margin-top: 15px;
     height: 60px;
+    //border: 1px solid rgb(230, 230, 230);
+    height: 170px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
 
     &Item{
       font-family: 'Noto Sans TC', sans-serif;
       font-size: 15px;
       width: 395px;
-      //width: 100%;
       color: black;
       text-decoration: none;
-      border: 3px solid rgba(134,97,229,1);
-      border-radius: 10px;
       margin-top: 3px;
-      font-weight: bold;
       background-color: white;
-      transition: 0.3s linear;
+      border-radius: 10px;
       padding: 5px;
-
-      &:hover {
-        background-color: rgba(134,97,229,1);
-        color:white;
-        background: linear-gradient(90deg, rgba(134,97,229,1) 0%, rgba(82,34,208,1) 100%);
-      }
+      font-weight: bold;
+      margin-bottom: 10px;
+      border: 1px solid $form-border-color;
+      //border:1px solid red;
     }
 
     &Result{
@@ -78,6 +75,7 @@
       padding: 0;
       box-sizing: border-box;
       z-index: 99999;
+      color: black;
 
       &:focus {
         outline: none;
@@ -105,4 +103,31 @@
   &:focus {
     outline: none;
   }
+}
+
+#startGame {
+  border: none;
+  background-color: black; 
+  width: 50%;
+    margin-left: 25%;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 5px;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.5s linear;
+    color: white;
+
+    &:hover {
+      background-color: white;
+      color: black;
+      border: 2px solid black;
+    }
+    
+    &:focus {
+      outline: none;
+    }
 }

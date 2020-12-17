@@ -6,6 +6,7 @@ import { Games } from './Games/Games';
 import {Game} from './Game/Game';
 import { MillionareSelect } from './MillionareSelect/MillionareSelect';
 import {Statistics} from './Statistics/Statistics';
+import { Loading } from './Loading/Loading';
 
 
 
@@ -17,5 +18,6 @@ export {
     Games,
     Game,
     MillionareSelect,
-    Statistics
+    Statistics,
+    Loading,
 }

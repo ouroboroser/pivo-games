@@ -49,6 +49,12 @@ export const routes:Array<any> = [
         path: '/millionare',
         auth: true,
         component: view.Millionare,
+    }, 
+
+    {
+        path:'/millionaire-process',
+        auth: true,
+        component: view.MillionaireProcess,
     }
 
 ];

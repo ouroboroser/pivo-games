@@ -1,7 +1,9 @@
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './LoginForm.scss';
+
+import {Auth} from '../../services/auth';
 
 const apiUrl = 'http://35.233.79.129/auth';
 
@@ -15,6 +17,12 @@ export const LoginForm = () => {
   const [username, setUsername] = useState<string>(initValue.username);
   const [password, setPassword] = useState<string>(initValue.password);
   const [error, setError] = useState<boolean>(initValue.error);
+
+  let a = new Auth(5, initValue.username, initValue.password);
+  console.log('A = ', a);
+  const b = a.Test(50)
+  console.log('New A = ', b);
+
 
   const signUpHandler = (username: string, password: string) => {
     const data = {

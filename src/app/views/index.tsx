@@ -6,6 +6,7 @@ import {Edit} from './Edit';
 import {Song} from './Song';
 import {Crossword} from './Crossword';
 import {Millionare} from './Millionaire';
+import {MillionaireProcess} from './MillionaireProcess/MillionaireProcess';
 
 export {
     Home,
@@ -16,4 +17,5 @@ export {
     Song,
     Crossword,
     Millionare,
+    MillionaireProcess
 }
