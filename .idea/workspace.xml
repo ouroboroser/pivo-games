@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd957130-d1e4-4e2f-b1fc-5db5501bcb1a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Games/Games.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Games/Games.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/LoginForm/LoginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/LoginForm/LoginForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/MillionareSelect/MillionareSelect.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/MillionareSelect/MillionareSelect.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/MillionareSelect/MillionareSelect.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/MillionareSelect/MillionareSelect.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/User/User.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/User/User.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/_fonts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/_fonts.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routes/routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/routes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/views/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/Home.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +27,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../db2/foodstufff-api" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -54,6 +47,8 @@
       <option name="presentableId" value="Default" />
       <updated>1608147660366</updated>
       <workItem from="1608147661791" duration="3810000" />
+      <workItem from="1608294544904" duration="828000" />
+      <workItem from="1608542130870" duration="26000" />
     </task>
     <servers />
   </component>
