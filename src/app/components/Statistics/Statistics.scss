@@ -1,0 +1,11 @@
+@import '../colors.scss';
+@import '../fonts.scss';
+
+.statistics{
+    width: 80%;
+    height: 400px;
+    margin-left: 10%;
+    background-color: white;
+    border-radius: 45px;
+    box-shadow: 10px 15px 10px $form-shadow;
+}

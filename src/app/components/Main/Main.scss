@@ -1,0 +1,88 @@
+@import '../colors.scss';
+@import '../fonts.scss';
+
+.mainScreen {
+    //border: 1px solid red;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+
+    &Title{
+        //border: 1px solid blue;
+        width: 40%;
+        text-align: center;
+        font-family: 'Anton', sans-serif;
+        font-family: 'Indie Flower', cursive;
+        font-family: 'Archivo Narrow', sans-serif;
+        //font-family: 'Fredoka One', cursive;
+        font-family: 'Noto Sans SC', sans-serif;
+        font-size: 80px;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        //border:1px solid goldenrod;
+
+        &Main{
+            //border:1px solid salmon;
+            margin-bottom: -50px;
+            margin-top: 160px;
+        }
+
+        &Sub{
+            font-weight: 200;
+            //border: 1px solid green;
+            font-size: 60px;
+            border-bottom: -150px;
+        }
+    }
+
+    &LinkWrapper{
+        text-align: center;
+        height: 50px;
+        width: 40%;
+        border-radius: 10px;
+        background-color: $accent-link-bg-color;
+
+        &:hover{
+            background-color: $hover-accent-link-bg-color;
+        }
+    }
+
+    &Link {
+        color:white;
+        height: 10px;
+        font-family: 'Noto Sans TC', sans-serif;
+        text-decoration: none;
+        font-size: 20px;
+        display: block;
+        margin-top: 8px;
+
+        &:hover{
+            color: white;
+            text-decoration: none;
+        }
+
+        &:focus {
+            outline: none;
+        }
+        
+    }
+
+    &Picture{
+        //border: 1px solid green;
+        width: 40%;
+
+        &Img{
+            //border:1px solid salmon;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .mainScreen{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}

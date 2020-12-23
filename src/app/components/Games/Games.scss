@@ -1,0 +1,54 @@
+@import '../colors.scss';
+@import '../fonts.scss';
+
+.games {
+    height: 100vh;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid rgba(207, 207, 207, 0.068);
+    justify-content: center;
+    background-color: rgb(235, 233, 233);
+    //z-index: -1;
+
+    &Btn{
+        color: rgb(197, 196, 196);
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        box-sizing: border-box;
+        z-index: 99999;
+        
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &Item{
+        height: 250px;
+        margin-top: 1rem;
+        width: 250px;
+        box-sizing:border-box;
+        margin: 1rem;
+        border-radius: 45px;
+        box-shadow: 10px 15px 10px rgb(211, 211, 211);
+        background-color: white;
+        border:1px solid salmon;
+
+        &Wrapper{
+            &Link{
+                font-family: 'Noto Sans TC', sans-serif;
+                font-size: 20px;
+                font-weight: 700;
+                text-decoration: none;
+                color:rgb(236,97,91);
+
+                &:hover {
+                    text-transform: none;
+                    color:rgb(212, 88, 84);
+                }
+            }
+        }
+    }
+}

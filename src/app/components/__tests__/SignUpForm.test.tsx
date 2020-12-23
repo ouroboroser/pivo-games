@@ -1,19 +1,21 @@
 import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
+import {BrowserRouter} from 'react-router-dom';
 
 import { SignUpForm } from '../SignUpForm/SignUpForm';
+import { nameIsValid, emailIsValid, passwordIsValid } from '../validation';
 
 describe('sign up', () => {
     it('check validation', async () => {
         const incorrectUser = {
-            username: 'testuser10',
-            email: 'testuse10gmail.com',
+            username: '',
+            email: 'testuse10gmail',
             password: 'testuser10',
             confirm: 'testuser100',
         }
 
-        render(<SignUpForm />);
+        render( <BrowserRouter> <SignUpForm /> </BrowserRouter> );
         screen.debug();
 
         const input_username = screen.getByPlaceholderText(/name/i);
@@ -28,7 +30,7 @@ describe('sign up', () => {
 
         await waitFor(() => {
             fireEvent(
-              screen.getByText(/sign up/i),
+              screen.getByText(/registration/i),
               new MouseEvent('click', {
                 bubbles: true,
                 cancelable: true,
@@ -37,7 +39,9 @@ describe('sign up', () => {
           });
       
           await waitFor(() =>
-          expect(screen.queryByText('Data is not correct')).toBeTruthy(),
+          expect(screen.queryByText('Data is not correct')).toBe(null)
           );
+
+          screen.debug()
     })
 })

@@ -22,9 +22,39 @@ export const routes:Array<any> = [
     },
 
     {
-        path: '/test',
+        path: '/profile',
         auth: true,
-        component: view.Test,
+        component: view.Profile,
     },
+
+    {
+        path: '/edit',
+        auth: true,
+        component: view.Edit,
+    },
+
+    {
+        path: '/song',
+        auth: true,
+        component: view.Song,
+    },
+
+    {
+        path: '/crossword',
+        auth: true,
+        component: view.Crossword,
+    },
+
+    {
+        path: '/millionare',
+        auth: true,
+        component: view.Millionare,
+    }, 
+
+    {
+        path:'/millionaire-process',
+        auth: true,
+        component: view.MillionaireProcess,
+    }
 
 ];

@@ -1,7 +1,8 @@
 import React from 'react';
 import { LoginForm } from '../LoginForm/LoginForm'; 
 import {render, screen, fireEvent, waitFor} from '@testing-library/react';
-import '@testing-library/jest-dom'
+import '@testing-library/jest-dom';
+import {BrowserRouter} from 'react-router-dom';
 
 describe('login', () => {
     it('correct login test', async () => {
@@ -10,7 +11,10 @@ describe('login', () => {
             password: 'testuser10',
         }
 
-        render(<LoginForm />)
+        render(<BrowserRouter>
+        <LoginForm />
+        </BrowserRouter>
+        )
         screen.debug();
         
         const input_username = screen.getByPlaceholderText(/name/i);
@@ -40,7 +44,9 @@ describe('login', () => {
             password: '',
         }
 
-        render(<LoginForm />)
+        render(<BrowserRouter>
+        <LoginForm />
+        </BrowserRouter>)
         screen.debug();
         
         const input_username = screen.getByPlaceholderText(/name/i);
