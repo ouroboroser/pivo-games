@@ -23,5 +23,8 @@
   },
   "include": [
     "src"
-  ]
+  ],
+  "files": [
+    "analyse.tsx"
+]
 }

@@ -1,10 +1,10 @@
-import { render } from '@testing-library/react';
 import React from 'react';
+import { MillionareQuestions } from '../../components';
 
 export const MillionaireProcess = () => {
     return (
         <div>
-            Start game millionere
+            <MillionareQuestions />
         </div>
     )
 }

@@ -52,9 +52,15 @@ export const routes:Array<any> = [
     }, 
 
     {
-        path:'/millionaire-process',
+        path:'/millionaire-process/:questionNumber',
         auth: true,
         component: view.MillionaireProcess,
+    },
+
+    {
+        path:'/millionaire-finish',
+        auth: true,
+        component: view.MillionareFinish,
     }
 
 ];
