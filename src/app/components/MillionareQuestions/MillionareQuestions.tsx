@@ -17,10 +17,10 @@ const MillionareQuestions: React.FC<MillionaireProps> = ({match}) => {
     const game = data[questionNumber];
     const answers = game.options;
     const pictureName = getPictureName(questionNumber);
-    const [ correctAnswer, setCorrectAnswer ] = useState<boolean>(false); 
-
+    
     const giveAnswer = answersId => {
         const trueAnswer = game.answerId;
+        let questionsQuantityCorrect:any = localStorage.getItem('questionsQuantityCorrect') || 0
         let points:any = localStorage.getItem('points') || 0
         let step = 1000;
         
@@ -28,8 +28,9 @@ const MillionareQuestions: React.FC<MillionaireProps> = ({match}) => {
             console.log('win')
             console.log('answer id: ', answersId);
             console.log('true answer: ', trueAnswer);
-
+            questionsQuantityCorrect = Number(questionsQuantityCorrect) + 1;
             points = Number(points) + step;
+            localStorage.setItem('questionsQuantityCorrect', questionsQuantityCorrect)
             localStorage.setItem('points', points);
             if (questionNumber < 9) {
                 window.location.href = `/millionaire-process/${questionNumber + 1}`

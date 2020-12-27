@@ -35,6 +35,7 @@ export const MillionareSelect = () => {
   const handlerSelectQuestions = (e: any) => {
     setQuestions(e);
     setSelectQuestions(true);
+    localStorage.setItem('questionsQuantity', e);
   }
 
   const millionaire = new Millionaire('millionare');
