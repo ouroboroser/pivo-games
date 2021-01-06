@@ -1,7 +1,4 @@
 import axios from 'axios';
-import useWebSocket, { ReadyState } from 'react-use-websocket';
-import { useState, useRef, useMemo } from 'react';
-
 const apiUrl = 'http://35.233.79.129/auth';
 
 export type Auth = {
@@ -37,33 +34,3 @@ export const _LoginWithData: Auth = {
     }
   },
 };
-
-// export const _LoginWS: Auth = {
-//   login: (username: string, password: string) => {
-//     console.log('username: ', username, 'password: ', password);
-//     const [socketUrl, setSocketUrl] = useState(apiUrl);
-//     const messageHistory = useRef([]);
-
-//     const { sendMessage, lastMessage, readyState } = useWebSocket(socketUrl);
-
-//     messageHistory.current = useMemo(
-//       () => messageHistory.current.concat(lastMessage),
-//       [lastMessage]
-//     );
-
-//     const handleClickChangeSocketUrl = useCallback(
-//       () => setSocketUrl('wss://demos.kaazing.com/echo'),
-//       []
-//     );
-
-//     const handleClickSendMessage = useCallback(() => sendMessage('Hello'), []);
-
-//     const connectionStatus = {
-//       [ReadyState.CONNECTING]: 'Connecting',
-//       [ReadyState.OPEN]: 'Open',
-//       [ReadyState.CLOSING]: 'Closing',
-//       [ReadyState.CLOSED]: 'Closed',
-//       [ReadyState.UNINSTANTIATED]: 'Uninstantiated',
-//     }[readyState];
-//   },
-// };

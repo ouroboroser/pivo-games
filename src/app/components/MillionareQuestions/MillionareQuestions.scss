@@ -1,0 +1,65 @@
+@import '../colors.scss';
+@import '../fonts.scss';
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.picture {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.process {
+  width: 40%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+
+  &Questions {
+    width: 100%;
+  }
+
+  &Answers {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &General {
+      height: 40px;
+      border: 1px solid rgb(240, 240, 240);
+      margin: 1rem;
+      border-radius: 10px;
+      box-shadow: 0px 0px 25px $form-shadow;
+      transition: 0.6s;
+      text-align: center;
+      font-family: 'Noto Sans TC', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      padding: 20px;
+
+      &:hover {
+        border: 1px solid white;
+        box-shadow: 0px 0px 25px $form-shadow;
+        transform: scale(1.1, 1.1);
+      }
+    }
+
+    &Zero,
+    &Three {
+      width: 400px;
+    }
+
+    &One,
+    &Two {
+      width: 250px;
+    }
+  }
+}

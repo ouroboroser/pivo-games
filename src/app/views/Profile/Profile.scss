@@ -1,5 +1,14 @@
 .profile {
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  ///border: 1px solid red;
+  margin-top: -10px;
+}
+
+@media (max-width: 999px) {
+  .profile {
+    flex-direction: column;
+    border: 1px solid salmon;
+  }
 }

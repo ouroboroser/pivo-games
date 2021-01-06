@@ -1,11 +1,19 @@
 import React, { Fragment, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+// import jwt from 'jwt-decode';
+import jwt_decode from "jwt-decode";
 
-import { Statistics } from '../Statistics/Statistics';
+import { TotalStatistics } from '../../components';
 import './User.scss';
 
 export const User = () => {
+  let user:any = localStorage.getItem('user');
+  user = jwt_decode(user);
+
+  console.log('user:', user);
+  
+  console.log('user: ', user);
   //const [username, ]
   const api = 'http://35.233.79.129/user/sovasova10';
 
@@ -25,8 +33,8 @@ export const User = () => {
         <div className='userInfo'>
           <div className='userInfoAvatar'></div>
           <div className='userInfoBio'>
-              <p className = 'userInfoBioName'> Username Username </p>
-              <p className = 'userInfoBioBio'> student </p>
+              <p className = 'userInfoBioName'> {user.username} </p>
+              <p className = 'userInfoBioBio'> {user.role} </p>
               <p className = 'userInfoBioLocation'> Kyiv, Ukraine </p>
           </div>
         </div>
@@ -35,7 +43,8 @@ export const User = () => {
           <p className = 'userLinkWrapper'> <Link className = 'userLinkWrapperLink' to = '/edit'> Exit </Link> </p>
         </div>
         <div className = 'userstatisticsBlock'>
-          <Statistics />
+          {/* <Statistics /> */}
+          <TotalStatistics />
         </div>
       </div>
     </Fragment>

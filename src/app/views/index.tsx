@@ -7,6 +7,9 @@ import {Song} from './Song';
 import {Crossword} from './Crossword';
 import {Millionare} from './Millionaire';
 import {MillionaireProcess} from './MillionaireProcess/MillionaireProcess';
+import { MillionareFinish } from './MillionareFinish/MillionareFinish';
+import { WhyThisApp } from './WhyThisApp/WhyThisApp';
+import { AboutUs } from './AboutUs/AboutUs';
 
 export {
     Home,
@@ -17,5 +20,8 @@ export {
     Song,
     Crossword,
     Millionare,
-    MillionaireProcess
+    MillionaireProcess,
+    MillionareFinish,
+    WhyThisApp,
+    AboutUs,
 }
