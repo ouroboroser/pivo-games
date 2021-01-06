@@ -1,13 +1,45 @@
 @import '../colors.scss';
 @import '../fonts.scss';
 
-.game{
+.game {
+  width: 60%;
+  height: 400px;
+  margin-left: 20%;
+  border-radius: 45px;
+  border: 1px solid rgb(235, 235, 235);
+  background-color: white;
+  margin-top: 1rem;
+  box-shadow: 10px 15px 10px $form-shadow;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+
+  &WrapperLink {
+    width: 80%;
+    margin-left: 10%;
+    border-radius: 10px;
+    height: 30px;
+    background-color: $accent-link-bg-color;
+  }
+
+  &Link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+  }
+
+  &Img {
     width: 60%;
-    height:400px;
-    margin-left: 20%;
-    border-radius: 45px;
-    border: 1px solid rgb(235, 235, 235);
-    background-color: white;
-    margin-top: 1rem;
-    box-shadow: 10px 15px 10px $form-shadow;
+  }
+
+  &Title {
+    text-align: center;
+    font-weight: bold;
+  }
+
+  &Description {
+    width: 35%;
+    margin-left: 5%;
+    text-align: center;
+  }
 }

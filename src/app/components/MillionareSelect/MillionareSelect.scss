@@ -38,7 +38,6 @@
     margin-left: -445px;
     margin-top: 15px;
     height: 60px;
-    //border: 1px solid rgb(230, 230, 230);
     height: 170px;
     justify-content: center;
     align-items: center;
@@ -57,7 +56,6 @@
       font-weight: bold;
       margin-bottom: 10px;
       border: 1px solid $form-border-color;
-      //border:1px solid red;
     }
 
     &Result{
@@ -68,7 +66,6 @@
 
     &Btn {
       border: 5px solid blue;
-      //color: rgb(197, 196, 196);
       background: transparent;
       border: none;
       cursor: pointer;

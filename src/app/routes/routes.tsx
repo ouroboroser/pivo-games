@@ -61,6 +61,18 @@ export const routes:Array<any> = [
         path:'/millionaire-finish',
         auth: true,
         component: view.MillionareFinish,
+    },
+
+    {
+        path:'/whythisapp',
+        auth: false,
+        component: view.WhyThisApp,
+    },
+
+    {
+        path:'/about',
+        auth: false,
+        component: view.AboutUs,
     }
 
 ];

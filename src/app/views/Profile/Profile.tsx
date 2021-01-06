@@ -5,6 +5,7 @@ import './Profile.scss';
 export const Profile = () => {
   return (
     <Fragment>
+      <AuthNavBar />
       <div className = 'profile'>
         <User />
         <Games />

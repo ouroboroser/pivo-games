@@ -8,6 +8,8 @@ import {Crossword} from './Crossword';
 import {Millionare} from './Millionaire';
 import {MillionaireProcess} from './MillionaireProcess/MillionaireProcess';
 import { MillionareFinish } from './MillionareFinish/MillionareFinish';
+import { WhyThisApp } from './WhyThisApp/WhyThisApp';
+import { AboutUs } from './AboutUs/AboutUs';
 
 export {
     Home,
@@ -20,4 +22,6 @@ export {
     Millionare,
     MillionaireProcess,
     MillionareFinish,
+    WhyThisApp,
+    AboutUs,
 }

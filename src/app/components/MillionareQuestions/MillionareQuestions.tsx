@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { Redirect } from 'react-router-dom';
+import React from 'react';
 import { RouteComponentProps, withRouter } from 'react-router';
 import './MillionareQuestions.scss';
 import { getPictureName } from '../helpers/getPictureName';

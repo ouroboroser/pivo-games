@@ -1,11 +1,16 @@
 import React from 'react';
 import { Main } from '../components';
 
-export class Home extends React.Component {
-  render() {
-    return <div>
-      <Main />
-    </div>;
+import { NavBar } from '../components/NavBar/NavBar';
+import { AuthNavBar } from '../components/AuthNavBar/AuthNavBar';
 
-  }
-}
+
+export const Home = () => {
+  const auth = localStorage.getItem('user');
+  return (
+    <div>
+      {auth ? <AuthNavBar /> : <NavBar />}
+      <Main />
+    </div>
+  );
+};
