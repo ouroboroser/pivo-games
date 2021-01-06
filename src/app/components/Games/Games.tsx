@@ -1,7 +1,7 @@
 import React from 'react';
 import { Game } from '../Game/Game';
 import Carousel from 'nuka-carousel';
-import { IoIosArrowForward, IoIosArrowBack, FaRoad } from 'react-icons/all';
+import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/all';
 import './Games.scss';
 
 import {

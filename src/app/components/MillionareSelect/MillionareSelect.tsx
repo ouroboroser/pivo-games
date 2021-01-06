@@ -18,8 +18,7 @@ export const MillionareSelect = () => {
   const [selectQuestions, setSelectQuestions] = useState<boolean>(false);
 
   const [loading, setLoading] = useState<boolean>(false);
-  const [getQuestions, setGetQuestions] = useState<any>([]);
-
+  
   const [startMillionare, setStartMillionare] = useState<boolean>(false);
 
   const handlerSelectTopic = (e: any) => {

@@ -2,7 +2,6 @@ import React from 'react';
 import './Statistics.scss';
 
 import {Line} from 'react-chartjs-2';
-import { data } from './data';
 
 type StatisticsProps = {
     value: any,

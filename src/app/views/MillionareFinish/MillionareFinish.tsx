@@ -1,10 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { getFinishPicture } from '../../components/helpers/getFinishPicture'; 
 import './MillionareFinish.scss';
 
 export const MillionareFinish = () => {
-    const questionsQuantityCorrect = localStorage.getItem('questionsQuantityCorrect');
+    // const questionsQuantityCorrect = localStorage.getItem('questionsQuantityCorrect');
     const totalPoints = localStorage.getItem('points');
     //const finish = getFinishPicture(questionsQuantityCorrect);
     

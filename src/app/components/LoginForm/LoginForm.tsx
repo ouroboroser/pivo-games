@@ -36,6 +36,7 @@ export const LoginForm = (props: { auth: Auth }) => {
         .catch((error) => {
           console.log(error);
           setLoading(false);
+          setError(true);
         });
     }
   };

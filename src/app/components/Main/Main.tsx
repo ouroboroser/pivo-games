@@ -29,7 +29,7 @@ export const Main = () => {
           <img
             className='mainScreenPictureImg'
             src={`${process.env.PUBLIC_URL}/img/testing-new-tech.png`}
-            alt='main picture'
+            alt='main'
             width='750'
           />
         </div>

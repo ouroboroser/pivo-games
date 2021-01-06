@@ -1,4 +1,4 @@
-name: Run test
+name: Build optimize version
 
 on:
   pull_request:
@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Add dependencies
+      - name: Build optimize version
         run: |
           yarn install
       - name: Run build
